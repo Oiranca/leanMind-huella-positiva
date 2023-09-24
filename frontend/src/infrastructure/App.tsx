@@ -7,7 +7,6 @@ import { EmailConfirmation } from './view/pages/EmailConfirmation';
 import { WrapperPages } from './view/components/templates/WrapperPages';
 import { Header } from './view/components/organisms/Header';
 import { Footer } from './view/components/organisms/Footer';
-import { LoginRegister } from './view/pages/User/LoginRegister';
 import { ConvocatoryDetails } from './view/pages/Convocations/ConvocatoryDetails';
 import { ConvocatoryList } from './view/pages/Convocations/ConvocatoryList';
 import { ConvocatoryRegister } from './view/pages/Convocations/ConvocatoryRegister';
@@ -20,6 +19,7 @@ import { LegalAdvice } from './view/pages/LegalAdvice';
 import { ModifyUser } from './view/pages/User/ModifyUser';
 import { PrivacyPolicy } from './view/pages/PrivacyPolicy';
 import { Contact } from './view/pages/Contact/Contact';
+import { LoginAndRegister } from '../application/pages/LoginAndRegister/LoginAndRegister';
 
 const App: React.FC = () => {
   const { isAuth } = useContext(Context);
@@ -41,7 +41,7 @@ const App: React.FC = () => {
               path={ROUTE.home}
               element={!isAuth ? <Navigate to={ROUTE.loginRegister} /> : <Home />}
             />
-            <Route path={ROUTE.loginRegister} element={<LoginRegister />} />
+            <Route path={ROUTE.loginRegister} element={<LoginAndRegister />} />
             <Route path={ROUTE.faq} element={<FrequentlyAskedQuestions />} />
             <Route path={ROUTE.organizations.register} element={<Esal />} />
             <Route path={ROUTE.cookiesPolicy} element={<CookiesPolicy />} />

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './MixFormOrganization.scss';
 import { useState } from 'react';
-import { FormLoginVolunteer } from '../FormLoginVolunteer';
+import { Login } from '../../../../../../application/components/Login';
 import { FormRegisterOrganization } from '../FormRegisterOrganization';
 
 export const MixFormOrganization: React.FC<{}> = () => {
@@ -27,7 +27,7 @@ export const MixFormOrganization: React.FC<{}> = () => {
           Registrarse
         </button>
       </div>
-      {activeLogin ? <FormLoginVolunteer /> : <FormRegisterOrganization />}
+      {activeLogin ? <Login /> : <FormRegisterOrganization />}
     </div>
   );
 };

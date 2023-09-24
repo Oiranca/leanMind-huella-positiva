@@ -1,4 +1,4 @@
-import {Volunteer} from './Volunteer';
+import {Volunteer} from './Volunteer/Volunteer';
 
 export type Convocatory = {
     id:string;

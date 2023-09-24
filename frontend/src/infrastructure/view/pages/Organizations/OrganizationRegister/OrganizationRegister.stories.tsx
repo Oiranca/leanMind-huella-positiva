@@ -3,7 +3,7 @@ import { OrganizationRegister } from './OrganizationRegister';
 import { withA11y } from '@storybook/addon-a11y';
 
 export default {
-  title: 'Organization | Form Register',
+  title: 'Organization | Form RegisterVolunteer',
   decorators: [withA11y],
 };
 

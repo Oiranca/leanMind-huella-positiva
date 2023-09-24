@@ -15,7 +15,7 @@ describe('Volunteer should', () => {
     cy.exec(COMMAND_TO_DROP_INFO_CREDENTIALS_TABLE)
       .its('stdout').should('contain', 'TRUNCATE TABLE');
 
-    // Register a default user test
+    // RegisterVolunteer a default user test
     cy.registerVolunteer(VOLUNTEER);
     cy.url().should('include', ROUTE.email.confirmation);
     cy.get('p').should('contain', 'reenviar correo');

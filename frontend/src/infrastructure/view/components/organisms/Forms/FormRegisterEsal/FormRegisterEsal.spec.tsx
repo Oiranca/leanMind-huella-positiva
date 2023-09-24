@@ -3,7 +3,7 @@ import { render, RenderResult } from '@testing-library/react';
 import { FormRegisterEsal } from './index';
 import { BrowserRouter } from 'react-router-dom';
 
-describe('Register Esal', () => {
+describe('RegisterVolunteer Esal', () => {
   it('should display the default message', () => {
     const renderResult: RenderResult = render(
       <BrowserRouter>
