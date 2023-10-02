@@ -18,8 +18,8 @@ import { CookiesPolicy } from './view/pages/CookiesPolicy';
 import { LegalAdvice } from './view/pages/LegalAdvice';
 import { ModifyUser } from './view/pages/User/ModifyUser';
 import { PrivacyPolicy } from './view/pages/PrivacyPolicy';
+import { LoginAndRegister } from '../application/pages/LoginAndRegister';
 import { Contact } from '../application/pages/Contact/Contact';
-import { LoginAndRegister } from '../application/pages/LoginAndRegister/LoginAndRegister';
 
 const App: React.FC = () => {
   const { isAuth } = useContext(Context);

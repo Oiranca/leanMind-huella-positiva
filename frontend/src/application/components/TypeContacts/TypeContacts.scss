@@ -1,0 +1,55 @@
+$purple-tone: #7e254e;
+$yellow-tone: #eabd00;
+
+.TypeContacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .contactTitle > h2 {
+    color: $purple-tone;
+    font-size: 1.5rem;
+  }
+
+  .typeContactsInformation {
+    font-size: 1rem;
+
+    li {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+
+      .typeContacts {
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .faq {
+    color: black;
+    text-align: center;
+    margin: 24px 0px 16px;
+
+    .LinkText {
+      color: $yellow-tone;
+      text-decoration: none;
+      font-weight: normal;
+      margin-left: 0.5rem;
+
+      &:hover {
+        color: $purple-tone;
+      }
+    }
+  }
+
+  .slogan {
+    text-align: center;
+    color: $purple-tone;
+    font-size: 35px;
+  }
+}
