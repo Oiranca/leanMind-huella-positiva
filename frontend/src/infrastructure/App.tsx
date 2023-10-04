@@ -17,7 +17,7 @@ import { Esal } from './view/pages/Esal';
 import { CookiesPolicy } from './view/pages/CookiesPolicy';
 import { LegalAdvice } from './view/pages/LegalAdvice';
 import { ModifyUser } from './view/pages/User/ModifyUser';
-import { PrivacyPolicy } from './view/pages/PrivacyPolicy';
+import { PrivacyPolicy } from '../application/pages/PrivacyPolicy';
 import { LoginAndRegister } from '../application/pages/LoginAndRegister';
 import { Contact } from '../application/pages/Contact/Contact';
 

@@ -1,0 +1,43 @@
+.Privacy {
+
+  padding: 1rem;
+
+  .objectives {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+
+    .objectivesText {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        width: calc(100% - 1rem);
+        margin: 0.5rem 0;
+
+        .boldText {
+          font-weight: bold;
+          margin-right: 0.25rem;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 700px) {
+  .Privacy {
+    padding: 0.5rem;
+
+    .objectives {
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: fit-content;
+      }
+
+    }
+  }
+}
