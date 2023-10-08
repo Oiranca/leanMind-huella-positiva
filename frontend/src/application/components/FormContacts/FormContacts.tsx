@@ -1,8 +1,8 @@
-import { FieldForm } from '../components/Forms/FieldForm';
-import { TextAreaForm } from '../components/Forms/TextAreaForm/TextAreaForm';
-import { LinkText } from '../../infrastructure/view/components/atoms/LinkText';
-import { ROUTE } from '../../infrastructure/http/routes';
-import { LinkButton } from '../../infrastructure/view/components/atoms/LinkButton/LinkButton';
+import { FieldForm } from '../Forms/FieldForm';
+import { TextAreaForm } from '../Forms/TextAreaForm/TextAreaForm';
+import { LinkText } from '../../../infrastructure/view/components/atoms/LinkText';
+import { ROUTE } from '../../../infrastructure/http/routes';
+import { LinkButton } from '../../../infrastructure/view/components/atoms/LinkButton/LinkButton';
 import React from 'react';
 import './FormContacts.scss';
 

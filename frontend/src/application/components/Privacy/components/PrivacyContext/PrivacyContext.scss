@@ -1,0 +1,25 @@
+.PrivacyContext {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+
+  header > h3 {
+    color: #eabd00;
+    font-weight: normal;
+    font-size: large;
+  }
+
+  .linksContext {
+    color: #7E254E;
+    font-weight: bold;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+  .boldText{
+    margin-left: 0.25rem;
+  }
+
+  ul > li {
+    margin-bottom: 0.5rem;
+  }
+}

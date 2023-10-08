@@ -1,10 +1,10 @@
-import * as React from 'react';
 import lock from '../../assets/img/lock.svg';
-import './Privacy.scss';
+import * as React from 'react';
+import './PrivacyHeader.scss';
 
-export const Privacy: React.FC<{}> = () => {
+export const PrivacyHeader: React.FC<{}> = () => {
   return (
-    <article className="Privacy">
+    <article className={'PrivacyHeader'}>
       <header>
         <h1>Política de privacidad</h1>
       </header>
@@ -24,10 +24,7 @@ export const Privacy: React.FC<{}> = () => {
           <p>
             Las siguientes políticas de privacidad están destinadas a informarte sobre
             cómo usamos tu información personal cumpliendo con las disposiciones y
-            requisitos del Reglamento General Europeo de Protección de Datos. Las
-            siguientes políticas de privacidad están destinadas a informarte sobre cómo
-            usamos tu información personal cumpliendo con las disposiciones y requisitos
-            del Reglamento General Europeo de Protección de Datos.
+            requisitos del Reglamento General Europeo de Protección de Datos.
           </p>
         </section>
       </section>

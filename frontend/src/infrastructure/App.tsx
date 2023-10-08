@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import './styles/scss/index.scss';
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
-import { Home } from './view/pages/Home/Home';
 import { ROUTE } from './http/routes';
+import { Context } from './Context';
+import { Home } from './view/pages/Home/Home';
 import { EmailConfirmation } from './view/pages/EmailConfirmation';
 import { WrapperPages } from './view/components/templates/WrapperPages';
 import { Header } from './view/components/organisms/Header';
@@ -11,7 +12,6 @@ import { ConvocatoryDetails } from './view/pages/Convocations/ConvocatoryDetails
 import { ConvocatoryList } from './view/pages/Convocations/ConvocatoryList';
 import { ConvocatoryRegister } from './view/pages/Convocations/ConvocatoryRegister';
 import { ConvocatoryVolunteers } from './view/pages/Convocations/ConvocatoryVolunteers';
-import { Context } from './Context';
 import { FrequentlyAskedQuestions } from './view/pages/FrequentlyAskedQuestions';
 import { Esal } from './view/pages/Esal';
 import { CookiesPolicy } from './view/pages/CookiesPolicy';

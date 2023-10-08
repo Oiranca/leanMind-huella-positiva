@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.scss';
 import { TypeContacts } from '../../components/TypeContacts/TypeContacts';
-import { FormContacts } from '../../FormContacts/FormContacts';
+import { FormContacts } from '../../components/FormContacts/FormContacts';
 
 export const Contact: React.FC<{}> = () => {
   return (
