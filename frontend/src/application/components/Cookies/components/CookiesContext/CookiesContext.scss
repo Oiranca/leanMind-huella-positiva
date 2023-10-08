@@ -1,0 +1,19 @@
+.CookiesContext{
+  section > ul > li {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    width: calc(100% - 1rem);
+    margin: 0.5rem 0;
+  }
+
+  a {
+    margin-left: 0.25rem;
+    color: #ad2d68;
+
+  }
+  .boldText{
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+}

@@ -80,7 +80,7 @@ export const PrivacyContext: React.FC = () => {
         <section>
           <p>
             Utilizamos cookies, servicios de análisis web y complementos de redes sociales
-            en nuestro sitio web para mejorar tu experiencia de navegación.{' '}
+            en nuestro sitio web para mejorar tu experiencia de navegación.
             <a
               href={'/cookies-policy/'}
               className={'linksContext'}
