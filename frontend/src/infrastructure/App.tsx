@@ -15,7 +15,7 @@ import { ConvocatoryVolunteers } from './view/pages/Convocations/ConvocatoryVolu
 import { FrequentlyAskedQuestions } from './view/pages/FrequentlyAskedQuestions';
 import { Esal } from './view/pages/Esal';
 import { CookiesPolicy } from '../application/pages/CookiesPolicy';
-import { LegalAdvice } from './view/pages/LegalAdvice';
+import { LegalAdvice } from '../application/pages/LegalAdvice';
 import { ModifyUser } from './view/pages/User/ModifyUser';
 import { PrivacyPolicy } from '../application/pages/PrivacyPolicy';
 import { LoginAndRegister } from '../application/pages/LoginAndRegister';
