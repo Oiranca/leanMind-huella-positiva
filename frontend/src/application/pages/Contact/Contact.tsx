@@ -5,9 +5,9 @@ import { FormContacts } from '../../components/FormContacts/FormContacts';
 
 export const Contact: React.FC<{}> = () => {
   return (
-    <div className="main-div">
+    <article className="Contact">
       <TypeContacts />
       <FormContacts />
-    </div>
+    </article>
   );
 };

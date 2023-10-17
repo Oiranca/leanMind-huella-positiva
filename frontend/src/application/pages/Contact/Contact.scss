@@ -1,23 +1,20 @@
 $purple-tone: #7e254e;
 $yellow-tone: #eabd00;
 
-div {
-  .main-div {
-    display: flex;
-    text-align: left;
-    flex-direction: column;
 
-  }
-
+.Contact {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  padding: 1rem;
 
 }
 
+
 @media (max-width: 992px) {
-  div {
-    .main-div {
-      display: flex;
-      flex-direction: column;
-    }
+  .Contact {
+    display: flex;
+    flex-direction: column;
   }
 }
 
