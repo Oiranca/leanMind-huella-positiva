@@ -1,0 +1,35 @@
+.AddressData {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding:0 1rem 2rem;
+  background-color: white;
+
+
+  .addressDataTitle {
+    width: calc(90% - 22px);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #ad2d68;
+
+
+  }
+
+  .localization, .address {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .FieldForm, .FormSelect {
+      margin-left: 3rem;
+      width: calc(30% - 5px);
+
+      input[name='zipcode'] {
+        width: 40%;
+      }
+    }
+  }
+
+
+}
