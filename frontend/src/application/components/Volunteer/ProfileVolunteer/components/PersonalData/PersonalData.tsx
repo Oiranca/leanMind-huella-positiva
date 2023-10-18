@@ -64,17 +64,6 @@ export const PersonalData: React.FC<{}> = () => {
       </section>
       <section className={'contact'}>
         <FieldForm
-          title="Teléfono"
-          name="phoneNumber"
-          type="text"
-          stateValidate={check.phoneNumber}
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.phoneNumber}
-        />
-        <FieldForm
           title="Email"
           name="email"
           type="email"
@@ -84,6 +73,17 @@ export const PersonalData: React.FC<{}> = () => {
             setNameEvent(e.target.name);
           }}
           messageInfoUser={messageInfoUser.email}
+        />
+        <FieldForm
+          title="Teléfono"
+          name="phoneNumber"
+          type="text"
+          stateValidate={check.phoneNumber}
+          onChange={(e) => {
+            setInputValue(e.target.value);
+            setNameEvent(e.target.name);
+          }}
+          messageInfoUser={messageInfoUser.phoneNumber}
         />
       </section>
     </form>

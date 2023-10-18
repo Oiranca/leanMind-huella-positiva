@@ -3,7 +3,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  padding: 0 2rem;
+  padding: 0 1rem 2rem;
+  background-color: white;
+
 
   header {
     border-radius: 1rem;
@@ -45,12 +47,11 @@
     .FieldForm {
       margin-left: 2.5rem;
       width: calc(30% - 5px);
-    }
 
-    .FieldForm:last-child {
-      .InputFieldForm {
+      input[name='birthday'] {
         width: 50%;
       }
+
     }
 
   }
@@ -64,6 +65,10 @@
     .FieldForm {
       margin-left: 4rem;
       width: calc(40% - 25px);
+
+      input[name='phoneNumber'] {
+        width: 60%;
+      }
     }
   }
 }
