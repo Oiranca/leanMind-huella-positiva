@@ -1,0 +1,135 @@
+.PersonalData {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 2rem;
+
+  header {
+    border-radius: 1rem;
+    width: calc(90% - 22px);
+
+    .profileTitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: #ad2d68;
+
+    }
+
+    .profileImage {
+      background: #eabd00;
+      border-radius: 2px;
+      height: 10rem;
+
+
+      label {
+        img {
+          position: absolute;
+          margin: 75px 40px 65px 40px;
+        }
+
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .information {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5rem;
+
+    .FieldForm {
+      margin-left: 2.5rem;
+      width: calc(30% - 5px);
+    }
+
+    .FieldForm:last-child {
+      .InputFieldForm {
+        width: 50%;
+      }
+    }
+
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    .FieldForm {
+      margin-left: 4rem;
+      width: calc(40% - 25px);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .PersonalData {
+    padding: 1rem;
+
+    header {
+      .profileTitle {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+
+      }
+
+      .profileImage {
+        height: 8rem;
+
+
+        label {
+          img {
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 90px;
+            width: 90px;
+          }
+
+
+        }
+      }
+    }
+
+    .information {
+      flex-direction: column;
+      margin-top: 1rem;
+
+      .FieldForm {
+        margin-top: 2rem;
+        margin-left: 0;
+        width: auto;
+
+      }
+
+      .FieldForm:last-child {
+        .InputFieldForm {
+          width: auto;
+        }
+      }
+
+    }
+
+    .contact {
+      flex-direction: column;
+      justify-content: center;
+
+      .FieldForm {
+        margin-top: 2rem;
+        margin-left: 0;
+        width: auto;
+
+      }
+
+    }
+
+
+  }
+
+}
+
