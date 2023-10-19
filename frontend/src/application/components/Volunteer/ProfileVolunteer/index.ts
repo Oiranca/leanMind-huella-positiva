@@ -1,1 +1,1 @@
-export { ModifyUser } from './ModifyUser';
+export { ProfileVolunteer } from './ProfileVolunteer';

@@ -1,0 +1,58 @@
+.ProfileVolunteer {
+  padding: 1rem;
+
+  .profileVolunteerButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: white;
+    padding: 1rem;
+
+
+    .curriculumButton {
+      height: fit-content;
+      padding: 1rem 3.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+      background: #7e254e;
+      font-size: 1rem;
+      text-align: center;
+
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      input {
+        display: none;
+      }
+
+      &.uploaded {
+        background: #eabd00;
+      }
+
+    }
+
+    .submitButton {
+      text-align: center;
+
+      .SubmitButton {
+        padding: 1rem 4rem;
+
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 1000px) {
+  .ProfileVolunteer {
+    .profileVolunteerButtons {
+      flex-direction: column;
+    }
+  }
+
+}
