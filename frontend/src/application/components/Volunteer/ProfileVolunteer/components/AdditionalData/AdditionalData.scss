@@ -1,0 +1,87 @@
+.AdditionalData {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 1rem 2rem;
+  background-color: white;
+  align-content: center;
+
+  .additionalDataTitle {
+    width: calc(90% - 22px);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #ad2d68;
+  }
+
+  .socialNetworks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    .FieldFormVolunteer {
+      width: calc(30% - 5px);
+      margin-left: 2.5rem;
+
+
+    }
+
+    .TextAreaForm {
+      padding: 0;
+      width: calc(30% - 5px);
+      margin-left: 2.5rem;
+
+    }
+
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .AdditionalData {
+    padding: 1rem;
+
+    .additionalDataTitle {
+      font-size: 1rem;
+
+      h2 {
+        margin: 0;
+      }
+    }
+
+
+    .socialNetworks {
+      flex-direction: column;
+
+      .FieldFormVolunteer, .TextAreaForm {
+        margin-top: 2rem;
+        margin-left: 0;
+        width: auto;
+
+      }
+
+      .FieldForm:last-child {
+        .InputFieldForm {
+          width: auto;
+        }
+      }
+
+    }
+
+    .contact {
+      flex-direction: column;
+      justify-content: center;
+
+      .FieldForm {
+        margin-top: 2rem;
+        margin-left: 0;
+        width: auto;
+
+      }
+
+    }
+
+
+  }
+
+}
