@@ -6,6 +6,7 @@ import { AdditionalData } from './components/AdditionalData/AdditionalData';
 import { useCorrectFormat } from '../../../../infrastructure/hooks/useCorrectFormat';
 import { profileService } from '../../../../domain/services/Profile.service';
 import { SubmitButton } from '../../../../infrastructure/view/components/atoms/SubmitButton';
+import profile_example from '../ProfileVolunteer/assets/profile_example.svg';
 
 export const ProfileVolunteer: React.FC<{}> = () => {
   const { check, data, town, messageInfoUser, setInputValue, setNameEvent } =
@@ -22,7 +23,15 @@ export const ProfileVolunteer: React.FC<{}> = () => {
   };
 
   return (
-    <form className={'ProfileVolunteer'} onSubmit={handleSubmit}>
+    <article className={'ProfileVolunteer'}>
+      <header>
+        <section className={'profileImage'}>
+          <label>
+            <img src={profile_example} alt="Profile image" />
+            <input type="file" />
+          </label>
+        </section>
+      </header>
       <section>
         <PersonalData />
         <AddressData />
@@ -39,7 +48,7 @@ export const ProfileVolunteer: React.FC<{}> = () => {
           <SubmitButton text="Actualizar perfil" />
         </div>
       </section>
-    </form>
+    </article>
   );
 };
 

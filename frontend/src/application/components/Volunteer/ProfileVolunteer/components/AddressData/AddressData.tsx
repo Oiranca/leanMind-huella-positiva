@@ -1,6 +1,6 @@
 import React from 'react';
-import { FieldForm } from '../../../../../../infrastructure/view/components/molecules/FieldForm';
-import { FormSelect } from '../../../../../../infrastructure/view/components/molecules/FormSelect';
+import { FormSelect } from '../../../../Forms/FormSelect';
+import { FieldForm } from '../../../../Forms/FieldForm';
 import { useCorrectFormat } from '../../../../../../infrastructure/hooks/useCorrectFormat';
 import './AddressData.scss';
 
@@ -40,8 +40,6 @@ export const AddressData: React.FC<{}> = () => {
           }}
           messageInfoUser={messageInfoUser.zipCode}
         />
-      </section>
-      <section className={'address'}>
         <FieldForm
           title="Dirección"
           name="address"

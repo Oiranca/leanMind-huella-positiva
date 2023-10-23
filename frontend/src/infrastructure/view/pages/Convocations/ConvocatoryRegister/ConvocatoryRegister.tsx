@@ -4,7 +4,7 @@ import './ConvocatoryRegister.scss';
 import {FieldForm} from '../../../components/molecules/FieldForm';
 import {SubmitButton} from '../../../components/atoms/SubmitButton';
 import {ConvocatoryCard} from '../../../components/organisms/ConvocatoryCard';
-import {FormSelect} from '../../../components/molecules/FormSelect';
+import {FormSelect} from '../../../../../application/components/Forms/FormSelect';
 import {LIST_MUNICIPALITY} from './assets/listMunicipality';
 import {ConvocatoryService} from '../../../../../domain/services/Convocatory.service';
 import {Convocatory, Skill} from '../../../../../domain/models/Convocatory';

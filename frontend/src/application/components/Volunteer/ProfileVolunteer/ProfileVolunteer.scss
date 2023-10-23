@@ -1,6 +1,29 @@
 .ProfileVolunteer {
   padding: 1rem;
 
+  header {
+    border-radius: 1rem;
+
+
+    .profileImage {
+      background: #eabd00;
+      border-radius: 2px;
+      height: 10rem;
+
+
+      label {
+        img {
+          position: absolute;
+          margin: 75px 40px 65px 40px;
+        }
+
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+
   .profileVolunteerButtons {
     display: flex;
     flex-direction: row;
@@ -50,6 +73,27 @@
 
 @media (max-width: 1000px) {
   .ProfileVolunteer {
+
+    header {
+      .profileImage {
+        height: 6rem;
+
+
+        label {
+          img {
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 40px;
+            width: 6rem;
+          }
+
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+
     .profileVolunteerButtons {
       flex-direction: column;
     }

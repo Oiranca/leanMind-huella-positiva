@@ -1,4 +1,4 @@
-import { LabelProps } from '../../atoms/Label/types';
+import { LabelProps } from '../../../../infrastructure/view/components/atoms/Label/types';
 
 export interface FormSelectProps extends LabelProps {
   name: string;

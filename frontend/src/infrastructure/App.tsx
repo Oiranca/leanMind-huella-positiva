@@ -16,7 +16,7 @@ import { FrequentlyAskedQuestions } from './view/pages/FrequentlyAskedQuestions'
 import { Esal } from './view/pages/Esal';
 import { CookiesPolicy } from '../application/pages/CookiesPolicy';
 import { LegalAdvice } from '../application/pages/LegalAdvice';
-import { ModifyUser } from './view/pages/User/ModifyUser';
+import { ProfileVolunteer } from '../application/components/Volunteer/ProfileVolunteer';
 import { PrivacyPolicy } from '../application/pages/PrivacyPolicy';
 import { LoginAndRegister } from '../application/pages/LoginAndRegister';
 import { Contact } from '../application/pages/Contact/Contact';
@@ -47,7 +47,7 @@ const App: React.FC = () => {
             <Route path={ROUTE.cookiesPolicy} element={<CookiesPolicy />} />
             <Route path={ROUTE.legalAdvice} element={<LegalAdvice />} />
             <Route path={ROUTE.email.confirmation} element={<EmailConfirmation />} />
-            <Route path={ROUTE.volunteers.profile} element={<ModifyUser />} />
+            <Route path={ROUTE.volunteers.profile} element={<ProfileVolunteer />} />
             <Route path={ROUTE.privacyPolicy} element={<PrivacyPolicy />} />
             <Route path={ROUTE.contact} element={<Contact />} />
           </Routes>

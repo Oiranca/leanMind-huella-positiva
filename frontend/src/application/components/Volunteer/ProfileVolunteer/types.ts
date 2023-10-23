@@ -1,4 +1,4 @@
-import { stateValidateTypes } from '../../../atoms/InputFieldForm/types';
+import { stateValidateTypes } from '../../Forms/FieldForm/types';
 
 export interface CheckInterface {
   name: stateValidateTypes;

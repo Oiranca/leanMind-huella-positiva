@@ -1,7 +1,5 @@
 import React from 'react';
-import { Image } from '../../../../../../infrastructure/view/components/atoms/Image';
-import profile_example from '../../../../../../infrastructure/view/components/organisms/Forms/MixModifyUserForm/assets/profile_example.svg';
-import { FieldForm } from '../../../../../../infrastructure/view/components/molecules/FieldForm';
+import { FieldForm } from '../../../../Forms/FieldForm';
 import { useCorrectFormat } from '../../../../../../infrastructure/hooks/useCorrectFormat';
 import { profileService } from '../../../../../../domain/services/Profile.service';
 import './PersonalData.scss';
@@ -16,16 +14,8 @@ export const PersonalData: React.FC<{}> = () => {
   };
   return (
     <form className="PersonalData" onSubmit={handleSubmit}>
-      <header>
-        <section className={'profileTitle'}>
-          <h2>Información personal</h2>
-        </section>
-        <section className={'profileImage'}>
-          <label>
-            <Image source={profile_example} description="Profile image" />
-            <input type="file" />
-          </label>
-        </section>
+      <header className={'personalDataTitle'}>
+        <h2>Información personal</h2>
       </header>
       <section className={'information'}>
         <FieldForm
@@ -61,8 +51,6 @@ export const PersonalData: React.FC<{}> = () => {
           }}
           messageInfoUser={messageInfoUser.birthDate}
         />
-      </section>
-      <section className={'contact'}>
         <FieldForm
           title="Email"
           name="email"

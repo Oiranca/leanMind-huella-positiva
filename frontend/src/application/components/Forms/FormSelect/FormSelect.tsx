@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './FormSelect.scss';
-import {Label} from '../../atoms/Label';
+import {Label} from '../../../../infrastructure/view/components/atoms/Label';
 import {FormSelectProps} from './types';
 
 export const FormSelect: React.FC<FormSelectProps> = ({
