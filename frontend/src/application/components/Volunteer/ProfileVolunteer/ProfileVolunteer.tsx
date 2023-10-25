@@ -38,10 +38,14 @@ export const ProfileVolunteer: React.FC<{}> = () => {
       <section>
         <PersonalData
           personalDataChange={handleChange}
-          throwMessage={messageInfoUser.name}
+          throwMessage={messageInfoUser}
           validate={check}
         />
-        <AddressData />
+        <AddressData
+          addressDataChange={handleChange}
+          throwMessage={messageInfoUser}
+          validate={check}
+        />
         <AdditionalData />
       </section>
       <section className="profileVolunteerButtons">

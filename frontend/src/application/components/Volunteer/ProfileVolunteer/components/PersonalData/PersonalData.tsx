@@ -5,7 +5,7 @@ import { CheckInterface } from '../../types';
 
 interface PersonalDataProps {
   personalDataChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  throwMessage: string;
+  throwMessage: { [key: string]: string };
   validate: CheckInterface;
 }
 
@@ -31,7 +31,7 @@ export const PersonalData = ({
           type="text"
           stateValidate={validate.name}
           onChange={getOnChange()}
-          messageInfoUser={throwMessage}
+          messageInfoUser={throwMessage.name}
         />
         <FieldForm
           title="Apellidos"
@@ -39,7 +39,7 @@ export const PersonalData = ({
           type="text"
           stateValidate={validate.surname}
           onChange={getOnChange()}
-          messageInfoUser={throwMessage}
+          messageInfoUser={throwMessage.surname}
         />
         <FieldForm
           title="Fecha de nacimiento"
@@ -47,7 +47,7 @@ export const PersonalData = ({
           type="date"
           stateValidate={validate.birthDate}
           onChange={getOnChange()}
-          messageInfoUser={throwMessage}
+          messageInfoUser={throwMessage.birthDate}
         />
         <FieldForm
           title="Email"
@@ -55,7 +55,7 @@ export const PersonalData = ({
           type="email"
           stateValidate={validate.email}
           onChange={getOnChange()}
-          messageInfoUser={throwMessage}
+          messageInfoUser={throwMessage.email}
         />
         <FieldForm
           title="Teléfono"
@@ -63,7 +63,7 @@ export const PersonalData = ({
           type="text"
           stateValidate={validate.phoneNumber}
           onChange={getOnChange()}
-          messageInfoUser={throwMessage}
+          messageInfoUser={throwMessage.phoneNumber}
         />
       </section>
     </article>
