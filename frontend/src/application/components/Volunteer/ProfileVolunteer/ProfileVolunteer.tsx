@@ -9,21 +9,24 @@ import { SubmitButton } from '../../../../infrastructure/view/components/atoms/S
 import profile_example from '../ProfileVolunteer/assets/profile_example.svg';
 
 export const ProfileVolunteer: React.FC<{}> = () => {
-  const { check, data, town, messageInfoUser, setInputValue, setNameEvent } =
+  const { check, messageInfoUser, data, setInputValue, setNameEvent } =
     useCorrectFormat();
   const [cvButtonClass, setCvButtonClass] = useState('cv-button');
 
-  const handleChange = () => {
+  const handleChange = (changeEvent: React.ChangeEvent<HTMLInputElement>) => {
+    changeEvent.preventDefault();
     setCvButtonClass('cv-button uploaded');
+    setInputValue(changeEvent.target.value);
+    setNameEvent(changeEvent.target.name);
   };
 
-  const handleSubmit = async (event: React.FormEvent) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     profileService.editProfile(data);
   };
 
   return (
-    <article className={'ProfileVolunteer'}>
+    <form className={'ProfileVolunteer'} onSubmit={handleSubmit}>
       <header>
         <section className={'profileImage'}>
           <label>
@@ -33,7 +36,11 @@ export const ProfileVolunteer: React.FC<{}> = () => {
         </section>
       </header>
       <section>
-        <PersonalData />
+        <PersonalData
+          personalDataChange={handleChange}
+          throwMessage={messageInfoUser.name}
+          validate={check}
+        />
         <AddressData />
         <AdditionalData />
       </section>
@@ -48,7 +55,7 @@ export const ProfileVolunteer: React.FC<{}> = () => {
           <SubmitButton text="Actualizar perfil" />
         </div>
       </section>
-    </article>
+    </form>
   );
 };
 

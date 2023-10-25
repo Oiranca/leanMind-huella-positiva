@@ -1,19 +1,26 @@
 import React from 'react';
 import { FieldForm } from '../../../../Forms/FieldForm';
-import { useCorrectFormat } from '../../../../../../infrastructure/hooks/useCorrectFormat';
-import { profileService } from '../../../../../../domain/services/Profile.service';
 import './PersonalData.scss';
+import { CheckInterface } from '../../types';
 
-export const PersonalData: React.FC<{}> = () => {
-  const { check, data, messageInfoUser, setInputValue, setNameEvent } =
-    useCorrectFormat();
+interface PersonalDataProps {
+  personalDataChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  throwMessage: string;
+  validate: CheckInterface;
+}
 
-  const handleSubmit = async (event: React.FormEvent) => {
+export const PersonalData = ({
+  personalDataChange,
+  throwMessage,
+  validate,
+}: PersonalDataProps) => {
+  const getOnChange = () => (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
-    profileService.editProfile(data);
+    personalDataChange(event);
   };
+
   return (
-    <form className="PersonalData" onSubmit={handleSubmit}>
+    <article className="PersonalData">
       <header className={'personalDataTitle'}>
         <h2>Información personal</h2>
       </header>
@@ -22,58 +29,43 @@ export const PersonalData: React.FC<{}> = () => {
           title="Nombre"
           name="name"
           type="text"
-          stateValidate={check.name}
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.name}
+          stateValidate={validate.name}
+          onChange={getOnChange()}
+          messageInfoUser={throwMessage}
         />
         <FieldForm
           title="Apellidos"
           name="surname"
           type="text"
-          stateValidate={check.surname}
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.surname}
+          stateValidate={validate.surname}
+          onChange={getOnChange()}
+          messageInfoUser={throwMessage}
         />
         <FieldForm
           title="Fecha de nacimiento"
           name="birthday"
           type="date"
-          stateValidate={check.birthDate}
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.birthDate}
+          stateValidate={validate.birthDate}
+          onChange={getOnChange()}
+          messageInfoUser={throwMessage}
         />
         <FieldForm
           title="Email"
           name="email"
           type="email"
-          stateValidate={check.email}
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.email}
+          stateValidate={validate.email}
+          onChange={getOnChange()}
+          messageInfoUser={throwMessage}
         />
         <FieldForm
           title="Teléfono"
           name="phoneNumber"
           type="text"
-          stateValidate={check.phoneNumber}
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.phoneNumber}
+          stateValidate={validate.phoneNumber}
+          onChange={getOnChange()}
+          messageInfoUser={throwMessage}
         />
       </section>
-    </form>
+    </article>
   );
 };
