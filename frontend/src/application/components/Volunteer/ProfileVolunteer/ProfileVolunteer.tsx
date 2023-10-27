@@ -13,7 +13,9 @@ export const ProfileVolunteer: React.FC<{}> = () => {
     useCorrectFormat();
   const [cvButtonClass, setCvButtonClass] = useState('cv-button');
 
-  const handleChange = (changeEvent: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    changeEvent: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     changeEvent.preventDefault();
     setCvButtonClass('cv-button uploaded');
     setInputValue(changeEvent.target.value);
@@ -46,7 +48,11 @@ export const ProfileVolunteer: React.FC<{}> = () => {
           throwMessage={messageInfoUser}
           validate={check}
         />
-        <AdditionalData />
+        <AdditionalData
+          additionalDataChange={handleChange}
+          throwMessage={messageInfoUser}
+          validate={check}
+        />
       </section>
       <section className="profileVolunteerButtons">
         <div className={'curriculumButton'}>

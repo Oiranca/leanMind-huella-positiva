@@ -1,20 +1,30 @@
 import React from 'react';
-import { profileService } from '../../../../../../domain/services/Profile.service';
-import { useCorrectFormat } from '../../../../../../infrastructure/hooks/useCorrectFormat';
 import './AdditionalData.scss';
 import { FieldForm } from '../../../../Forms/FieldForm';
 import { TextAreaForm } from '../../../../Forms/TextAreaForm/TextAreaForm';
+import { CheckInterface } from '../../types';
 
-export const AdditionalData: React.FC<{}> = () => {
-  const { check, data, messageInfoUser, setInputValue, setNameEvent } =
-    useCorrectFormat();
+interface AdditionalDataProps {
+  additionalDataChange: (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
+  throwMessage: { [key: string]: string };
+  validate: CheckInterface;
+}
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    profileService.editProfile(data);
-  };
+export const AdditionalData = ({
+  additionalDataChange,
+  throwMessage,
+  validate,
+}: AdditionalDataProps) => {
+  const onChangeData =
+    () => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      event.preventDefault();
+      additionalDataChange(event);
+    };
+
   return (
-    <form className="AdditionalData" onSubmit={handleSubmit}>
+    <article className="AdditionalData">
       <header className={'additionalDataTitle'}>
         <h2>Información adicional</h2>
       </header>
@@ -23,34 +33,25 @@ export const AdditionalData: React.FC<{}> = () => {
           title="Twitter"
           name="twitter"
           type="url"
-          stateValidate={check.twitter}
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.twitter}
+          stateValidate={validate.twitter}
+          onChange={onChangeData()}
+          messageInfoUser={throwMessage.twitter}
         />
         <FieldForm
           title="LinkedIn"
           name="linkedin"
           type="url"
-          stateValidate={check.linkedin}
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.linkedin}
+          stateValidate={validate.linkedin}
+          onChange={onChangeData()}
+          messageInfoUser={throwMessage.linkedin}
         />
         <FieldForm
           title="Instagram"
           name="instagram"
           type="url"
-          stateValidate={check.instagram}
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.instagram}
+          stateValidate={validate.instagram}
+          onChange={onChangeData()}
+          messageInfoUser={throwMessage.instagram}
         />
         <TextAreaForm
           title="Información de interés"
@@ -58,13 +59,10 @@ export const AdditionalData: React.FC<{}> = () => {
           rows={16}
           cols={3}
           placeholder="Información de interés"
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            setNameEvent(e.target.name);
-          }}
-          messageInfoUser={messageInfoUser.additionalInformation}
+          onChange={onChangeData()}
+          messageInfoUser={throwMessage.additionalInformation}
         />
       </article>
-    </form>
+    </article>
   );
 };
