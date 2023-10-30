@@ -222,7 +222,7 @@ export const useCorrectFormat = () => {
             setMessageInfoUser({
               ...messageInfoUser,
               linkedin:
-                'Formato incorrecto Ej: "https://linkedin.com/in/nombre_de_usuario"',
+                'Formato incorrecto Ej: "https://www.linkedin.com/in/nombre_de_usuario"',
             });
           }
           break;
