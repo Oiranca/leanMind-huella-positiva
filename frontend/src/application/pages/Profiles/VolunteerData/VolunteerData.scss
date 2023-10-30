@@ -1,0 +1,31 @@
+.VolunteerData {
+  padding: 0 4rem;
+
+  .boldText {
+    font-weight: bold;
+  }
+
+
+}
+
+@media (max-width: 1200px) {
+  .VolunteerData {
+    padding: 0 4rem;
+
+
+  }
+
+}
+
+@media (max-width: 700px) {
+  .VolunteerData {
+    padding: 0 2rem;
+
+  }
+}
+
+@media (max-width: 600px) {
+  .VolunteerData {
+    padding: 0 1.5rem;
+  }
+}
