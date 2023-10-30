@@ -158,8 +158,37 @@ export const useCorrectFormat = () => {
             setData({ ...data, town: inputValue });
           } else {
             setCheck({ ...check, town: 'incorrect' });
+            setMessageInfoUser({
+              ...messageInfoUser,
+              town: 'Ciudad erronea',
+            });
           }
           break;
+        case 'island':
+          if (formatRoles.regexOnlyText.test(inputValue)) {
+            setCheck({ ...check, island: 'correct' });
+            setData({ ...data, island: inputValue });
+          } else {
+            setCheck({ ...check, island: 'incorrect' });
+            setMessageInfoUser({
+              ...messageInfoUser,
+              island: 'Isla erronea',
+            });
+          }
+          break;
+        case 'province':
+          if (formatRoles.regexOnlyText.test(inputValue)) {
+            setCheck({ ...check, province: 'correct' });
+            setData({ ...data, province: inputValue });
+          } else {
+            setCheck({ ...check, province: 'incorrect' });
+            setMessageInfoUser({
+              ...messageInfoUser,
+              province: 'Provincia erronea',
+            });
+          }
+          break;
+
         case 'address':
           if (formatRoles.regexAddress.test(inputValue)) {
             setCheck({ ...check, address: 'correct' });

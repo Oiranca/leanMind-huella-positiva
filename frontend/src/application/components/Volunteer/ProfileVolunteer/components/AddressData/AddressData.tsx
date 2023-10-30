@@ -1,7 +1,5 @@
 import React from 'react';
-import { FormSelect } from '../../../../Forms/FormSelect';
 import { FieldForm } from '../../../../Forms/FieldForm';
-import { useCorrectFormat } from '../../../../../../infrastructure/hooks/useCorrectFormat';
 import './AddressData.scss';
 import { CheckInterface } from '../../types';
 
@@ -16,7 +14,6 @@ export const AddressData = ({
   throwMessage,
   validate,
 }: AddressDataDataProps) => {
-  const { data, town } = useCorrectFormat();
   const onChangeData = () => (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     addressDataChange(event);
@@ -32,19 +29,17 @@ export const AddressData = ({
           title="Provincia"
           name="province"
           type="text"
-          value={data.province}
           stateValidate={validate.province}
-          onChange={addressDataChange}
+          onChange={onChangeData()}
           messageInfoUser={throwMessage.province}
-          disabled={true}
         />
         <FieldForm
           title="Isla"
           name="island"
           type="text"
           stateValidate={validate.island}
-          disabled={true}
-          value={data.island}
+          onChange={onChangeData()}
+          messageInfoUser={throwMessage.island}
         />
         <FieldForm
           title="Código Postal"
@@ -52,7 +47,7 @@ export const AddressData = ({
           type="text"
           stateValidate={validate.zipCode}
           onChange={onChangeData()}
-          messageInfoUser={validate.zipCode}
+          messageInfoUser={throwMessage.zipCode}
         />
         <FieldForm
           title="Dirección"
@@ -60,14 +55,15 @@ export const AddressData = ({
           type="text"
           stateValidate={validate.address}
           onChange={onChangeData()}
-          messageInfoUser={validate.address}
+          messageInfoUser={throwMessage.address}
         />
-
-        <FormSelect
-          name={'town'}
-          optionsList={town}
-          text={'Ciudad'}
-          onChange={onChangeData}
+        <FieldForm
+          title="Ciudad"
+          name="town"
+          type="text"
+          stateValidate={validate.town}
+          onChange={onChangeData()}
+          messageInfoUser={throwMessage.town}
         />
       </section>
     </article>
