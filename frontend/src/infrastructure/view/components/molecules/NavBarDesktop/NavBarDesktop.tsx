@@ -31,9 +31,9 @@ export const NavBarDesktop: React.FC<NavBarDesktopProps> = ({
             to={ROUTE.loginRegister}
           />
           <LinkText
-            key={`menu-registrarse-ESAL`}
+            key={`menu-necessito-ayuda`}
             text={'Necesito ayuda'}
-            to={ROUTE.organizations.register}
+            to={ROUTE.needHelp}
           />
         </Fragment>
       )}

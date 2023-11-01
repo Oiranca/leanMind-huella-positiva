@@ -1,32 +1,36 @@
 $purple-tone: #7e254e;
 $yellow-tone: #eabd00;
 
-.esal {
-  display: grid;
-  grid-template-columns: 15% 70% 15%;
-  grid-template-rows: 5rem 10rem 5rem 5rem;
-  row-gap: 1.57rem;
-  text-align: center;
-  h1{
-    grid-column: 2/3;
-    font-size: 3rem;
+.Esal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  .title {
+    font-size: 2rem;
     color: $purple-tone;
     font-weight: normal;
-  }  
-  .content{
-    grid-column: 2/3;
-    color: gray;
+  }
+
+  .context {
     p {
       margin-bottom: 2.5rem;
     }
+
+    .LinkText {
+      margin-left: 0.25rem;
+    }
   }
-  .buttons{
-    grid-column: 2/3;
+
+  .buttons {
+    width: calc(100% - 5rem);
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    button{
+
+    .LinkText {
       color: white;
       background-color: $yellow-tone;
       border-style: none;
@@ -34,26 +38,57 @@ $yellow-tone: #eabd00;
       font-size: 1rem;
       padding: 1.25rem 2.5rem;
       transition: 1s;
-      &:hover{
+
+      &:hover {
         background-color: $purple-tone;
         transform: scale(1.1);
       }
     }
   }
-  .last-message{
-    grid-column: 2/3;
+
+  .footerMessage {
     font-size: 1rem;
-    h2{
+
+    h2 {
       font-weight: normal;
       color: $purple-tone;
     }
   }
-  .LinkText{
+
+  .LinkText {
     text-decoration: none;
     color: $yellow-tone;
-    font-weight: bold; 
-    &:hover{
+    font-weight: bold;
+
+    &:hover {
       color: $purple-tone;
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .Esal {
+    padding: 2rem;
+
+    .title {
+      font-size: 1.25rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+
+      .LinkText {
+        margin-bottom: 1rem;
+      }
+
+    }
+
+    .footerMessage {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+
+}
+

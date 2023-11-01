@@ -13,13 +13,14 @@ import { ConvocatoryList } from './view/pages/Convocations/ConvocatoryList';
 import { ConvocatoryRegister } from './view/pages/Convocations/ConvocatoryRegister';
 import { ConvocatoryVolunteers } from './view/pages/Convocations/ConvocatoryVolunteers';
 import { FrequentlyAskedQuestions } from './view/pages/FrequentlyAskedQuestions';
-import { Esal } from './view/pages/Esal';
+import { Esal } from '../application/pages/Esal';
 import { CookiesPolicy } from '../application/pages/CookiesPolicy';
 import { LegalAdvice } from '../application/pages/LegalAdvice';
 import { PrivacyPolicy } from '../application/pages/PrivacyPolicy';
 import { LoginAndRegister } from '../application/pages/LoginAndRegister';
 import { Contact } from '../application/pages/Contact/Contact';
 import { VolunteerData } from '../application/pages/Profiles/VolunteerData/VolunteerData';
+import { FormRegisterEsal } from './view/components/organisms/Forms/FormRegisterEsal';
 
 const App: React.FC = () => {
   const { isAuth } = useContext(Context);
@@ -43,13 +44,17 @@ const App: React.FC = () => {
             />
             <Route path={ROUTE.loginRegister} element={<LoginAndRegister />} />
             <Route path={ROUTE.faq} element={<FrequentlyAskedQuestions />} />
-            <Route path={ROUTE.organizations.register} element={<Esal />} />
+            <Route path={ROUTE.needHelp} element={<Esal />} />
             <Route path={ROUTE.cookiesPolicy} element={<CookiesPolicy />} />
             <Route path={ROUTE.legalAdvice} element={<LegalAdvice />} />
             <Route path={ROUTE.email.confirmation} element={<EmailConfirmation />} />
             <Route path={ROUTE.volunteers.profile} element={<VolunteerData />} />
             <Route path={ROUTE.privacyPolicy} element={<PrivacyPolicy />} />
             <Route path={ROUTE.contact} element={<Contact />} />
+            <Route
+              path={ROUTE.organizations.register}
+              element={<FormRegisterEsal />}
+            />
           </Routes>
           <Footer />
         </WrapperPages>
