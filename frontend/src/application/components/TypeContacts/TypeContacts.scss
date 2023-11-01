@@ -5,6 +5,7 @@ $yellow-tone: #eabd00;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
 
   ul {
     padding: 0;
@@ -13,7 +14,7 @@ $yellow-tone: #eabd00;
 
   .contactTitle > h2 {
     color: $purple-tone;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .typeContactsInformation {
@@ -33,7 +34,7 @@ $yellow-tone: #eabd00;
   .faq {
     color: black;
     text-align: center;
-    margin: 24px 0px 16px;
+    margin: 24px 0 16px;
 
     .LinkText {
       color: $yellow-tone;
@@ -52,4 +53,21 @@ $yellow-tone: #eabd00;
     color: $purple-tone;
     font-size: 35px;
   }
+}
+
+@media (max-width: 1200px) {
+  .TypeContacts {
+    padding: 1rem;
+
+
+    .contactTitle > h2 {
+      font-size: 1.5rem;
+    }
+
+
+    .slogan {
+      font-size: 25px;
+    }
+  }
+
 }
