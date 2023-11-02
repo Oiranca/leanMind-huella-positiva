@@ -8,6 +8,7 @@ import { Image } from '../../../atoms/Image';
 import superHeroes from '../../../atoms/Image/assets/superHeroes.svg';
 import { LinkText } from '../../../atoms/LinkText';
 import { SubmitButton } from '../../../atoms/SubmitButton';
+import { ContactPersonRegister } from './component/ContactPersonRegister/ContactPersonRegister';
 
 export const FormRegisterEsal: React.FC<{}> = () => {
   const island = [
@@ -34,44 +35,8 @@ export const FormRegisterEsal: React.FC<{}> = () => {
 
   return (
     <form className="FormRegisterEsal" method={'POST'} id="form" onSubmit={handleSubmit}>
+      <ContactPersonRegister />
       <div className={'register-esal'}>
-        <div className="div-register-contact-person">
-          <header>
-            <h1>Persona de Contacto</h1>
-          </header>
-          <div className="row">
-            <div className={'col'}>
-              <FieldForm title={'Nombre *'} type={'text'} name={'Nombre'} />
-            </div>
-            <div className={'col'}>
-              <FieldForm title={'Apellidos *'} type={'text'} name={'Apellidos'} />
-            </div>
-          </div>
-          <div className="row">
-            <div className={'col'}>
-              <FieldForm title={'Email *'} type={'email'} name={'Email'} />
-            </div>
-            <div className={'col'}>
-              <FieldForm
-                title={'Confirmar email *'}
-                type={'email'}
-                name={'ConfirmarEmail'}
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className={'col'}>
-              <FieldForm
-                title={'Teléfono de contacto *'}
-                type={'text'}
-                name={'Telefono'}
-              />
-            </div>
-            <div className={'col'}>
-              <FieldForm title={'Contraseña *'} type={'password'} name={'Password'} />
-            </div>
-          </div>
-        </div>
         <div className={'div-register-esal'}>
           <header>
             <h1>Datos Entidad</h1>
