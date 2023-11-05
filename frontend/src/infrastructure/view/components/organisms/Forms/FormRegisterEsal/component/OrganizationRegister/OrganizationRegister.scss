@@ -1,0 +1,142 @@
+.OrganizationRegister {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem;
+
+  header > p, .LabelFormVolunteer, label {
+    color: #eab300;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+  }
+
+  .organizationRegisterTitle {
+    color: #7e254e;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .organizationRegisterData {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .FieldFormVolunteer {
+      margin-left: 2.5rem;
+      width: calc(30% - 5px);
+
+
+    }
+
+    .FieldFormVolunteer:has(input[name='zipcode']) {
+      margin-left: 2.5rem;
+      width: 20%;
+    }
+
+    .islands, .associations {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-left: 2.5rem;
+      width: calc(30% - 5px);
+
+
+      .islandData, .associationData {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    }
+
+    .TextAreaForm {
+      width: calc(30% - 10px);
+      padding: 0;
+      margin-left: 2.5rem;
+    }
+
+    .logo {
+      margin-left: 2.5rem;
+      width: calc(30% - 5px);
+
+      .file {
+        display: none;
+
+      }
+
+      .logoImage {
+        width: 220px;
+        margin-left: 2.5rem;
+      }
+    }
+
+    .isRegister {
+      margin-left: 2.5rem;
+      width: calc(40% - 5px);
+      .selectorIsRegister{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+      }
+
+    }
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .OrganizationRegister {
+    padding: 1rem;
+
+    .organizationRegisterData {
+      flex-direction: column;
+      align-items: center;
+
+      .FieldFormVolunteer {
+        margin-top: 2rem;
+        margin-left: 0;
+        width: calc(90% - 5px);
+
+      }
+
+      .FieldFormVolunteer:has(input[name='zipcode']) {
+        margin-top: 2rem;
+        margin-left: 0;
+        width: calc(90% - 5px);
+
+      }
+
+      .islands, .associations, .isRegister {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: calc(90% - 5px);
+
+        .selectorIsRegister{
+          justify-content: space-evenly;
+        }
+
+      }
+
+      .TextAreaForm {
+        width: calc(90% - 5px);
+        padding: 0;
+        margin-left: 0;
+        margin-top: 1rem;
+
+      }
+
+      .logo {
+        margin-left: 0;
+        width: calc(90% - 5px);
+
+        .logoImage {
+          width: 220px;
+          margin-left: 2.5rem;
+        }
+      }
+    }
+
+
+  }
+
+}
