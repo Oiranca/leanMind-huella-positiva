@@ -2,7 +2,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 2rem;
+
+  .LabelFormVolunteer {
+    color: #eab300;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+  }
 
   .contactPersonTitle {
     color: #7e254e;

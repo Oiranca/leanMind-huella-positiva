@@ -1,0 +1,38 @@
+.Assent {
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  header {
+    color: #7e254e;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+
+  .isAssent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 2.5rem;
+
+    .LinkText {
+      margin-left: 0.25rem;
+    }
+
+  }
+}
+
+@media (max-width: 1000px) {
+  .Assent {
+    padding: 1rem;
+
+    .isAssent {
+      margin-left: 0;
+      flex-wrap: unset;
+
+    }
+  }
+
+}
