@@ -1,11 +1,11 @@
 import * as React from 'react';
-import './FormRegisterEsal.scss';
+import './RegisterEsal.scss';
 import { ContactPersonRegister } from './component/ContactPersonRegister/ContactPersonRegister';
 import { OrganizationRegister } from './component/OrganizationRegister/OrganizationRegister';
-import { SubmitButton } from '../../../atoms/SubmitButton';
+import { SubmitButton } from '../../../infrastructure/view/components/atoms/SubmitButton';
 import { Assent } from './component/Assent/Assent';
 
-export const FormRegisterEsal: React.FC<{}> = () => {
+export const RegisterEsal: React.FC<{}> = () => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
   };
@@ -20,4 +20,4 @@ export const FormRegisterEsal: React.FC<{}> = () => {
   );
 };
 
-FormRegisterEsal.displayName = 'FormRegisterEsal';
+RegisterEsal.displayName = 'RegisterEsal';

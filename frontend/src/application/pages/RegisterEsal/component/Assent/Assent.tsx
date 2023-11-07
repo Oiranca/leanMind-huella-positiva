@@ -1,6 +1,6 @@
 import React from 'react';
-import { FormRadio } from '../../../../../molecules/FormRadio';
-import { LinkText } from '../../../../../atoms/LinkText';
+import { FormRadio } from '../../../../../infrastructure/view/components/molecules/FormRadio';
+import { LinkText } from '../../../../../infrastructure/view/components/atoms/LinkText';
 import './Assent.scss';
 
 export const Assent: React.FC<{}> = () => {

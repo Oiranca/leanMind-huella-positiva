@@ -1,9 +1,9 @@
 import React from 'react';
-import { FormRadio } from '../../../../../molecules/FormRadio';
-import superHeroes from '../../../../../atoms/Image/assets/superHeroes.svg';
+import { FormRadio } from '../../../../../infrastructure/view/components/molecules/FormRadio';
+import superHeroes from '../../../../../infrastructure/view/components/atoms/Image/assets/superHeroes.svg';
 import './OrganizationRegister.scss';
-import { FieldForm } from '../../../../../../../../application/components/Forms/FieldForm';
-import { TextAreaForm } from '../../../../../../../../application/components/Forms/TextAreaForm/TextAreaForm';
+import { FieldForm } from '../../../../components/Forms/FieldForm';
+import { TextAreaForm } from '../../../../components/Forms/TextAreaForm/TextAreaForm';
 
 export const ISLAND: string[] = [
   'Gran Canaria',

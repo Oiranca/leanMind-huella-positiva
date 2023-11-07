@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormRegisterEsal } from './FormRegisterEsal';
+import { RegisterEsal } from './RegisterEsal';
 import { withA11y } from '@storybook/addon-a11y';
 
 export default {
@@ -7,4 +7,4 @@ export default {
   decorators: [withA11y],
 };
 
-export const RegisterEsal = () => <FormRegisterEsal />;
+export const EsalRegister = () => <RegisterEsal />;

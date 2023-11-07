@@ -17,7 +17,7 @@ describe('method into convocatoryRepository', () => {
         const proposal: Convocatory = {
             id:'',
             title: 'Example Title',
-            organizer: 'Example FormRegisterEsal',
+            organizer: 'Example RegisterEsal',
             province: 35,
             town: 'Example Twon',
             address: 'Example address',
@@ -42,7 +42,7 @@ describe('method into convocatoryRepository', () => {
 
         const proposalDto: ProposalDTO = {
             title: 'Example Title',
-            esalName: 'Example FormRegisterEsal',
+            esalName: 'Example RegisterEsal',
             province: 35,
             town: 'Example Twon',
             address: 'Example address',

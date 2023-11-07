@@ -20,7 +20,7 @@ import { PrivacyPolicy } from '../application/pages/PrivacyPolicy';
 import { LoginAndRegister } from '../application/pages/LoginAndRegister';
 import { Contact } from '../application/pages/Contact/Contact';
 import { VolunteerData } from '../application/pages/Profiles/VolunteerData/VolunteerData';
-import { FormRegisterEsal } from './view/components/organisms/Forms/FormRegisterEsal';
+import { RegisterEsal } from '../application/pages/RegisterEsal';
 
 const App: React.FC = () => {
   const { isAuth } = useContext(Context);
@@ -53,7 +53,7 @@ const App: React.FC = () => {
             <Route path={ROUTE.contact} element={<Contact />} />
             <Route
               path={ROUTE.organizations.register}
-              element={<FormRegisterEsal />}
+              element={<RegisterEsal />}
             />
           </Routes>
           <Footer />

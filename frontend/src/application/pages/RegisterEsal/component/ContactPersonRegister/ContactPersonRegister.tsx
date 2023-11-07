@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactPersonRegister.scss';
-import { FieldForm } from '../../../../../../../../application/components/Forms/FieldForm';
+import { FieldForm } from '../../../../components/Forms/FieldForm';
 
 export const ContactPersonRegister: React.FC<{}> = () => {
   return (
